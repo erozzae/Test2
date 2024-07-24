@@ -1,4 +1,6 @@
 import streamlit as st
+import firebase_admin
+from firebase_admin import credentials, firestore
 import mysql.connector
 
 # Mengambil informasi rahasia
@@ -28,5 +30,4 @@ st.title('Data dari MySQL')
 
 query = "SELECT * FROM well_a limit 10"  # Ganti dengan query yang sesuai
 data = query_data(query)
-
 st.write(data)
