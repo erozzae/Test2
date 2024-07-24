@@ -2,18 +2,11 @@ import streamlit as st
 import mysql.connector
 
 # Mengambil informasi rahasia
-# db_config = {
-#     'user': st.secrets["mysql"]["user"],
-#     'password': st.secrets["mysql"]["password"],
-#     'host': st.secrets["mysql"]["host"],
-#     'database': st.secrets["mysql"]["database"]
-# }
-
 db_config = {
-    'user': "u567029078_tes",
-    'password': "Uzo12345_!",
-    'host': "siapkantahlebak.my.id",
-    'database': "u567029078_tes"
+    'user': st.secrets["mysql"]["user"],
+    'password': st.secrets["mysql"]["password"],
+    'host': st.secrets["mysql"]["host"],
+    'database': st.secrets["mysql"]["database"]
 }
 
 
