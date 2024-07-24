@@ -1,6 +1,11 @@
 import streamlit as st
 import mysql.connector
 
+# user = "erop3494_prediksi_pengeboran_admin"
+# password = "Uzo12345_!"
+# host = "erozz911.my.id"
+# database = "erop3494_tes"
+
 # Mengambil informasi rahasia
 db_config = {
     'user': st.secrets["mysql"]["user"],
