@@ -10,10 +10,10 @@ import mysql.connector
 # }
 
 db_config = {
-    'user': "erop3494_tes",
+    'user': "u567029078_tes",
     'password': "Uzo12345_!",
-    'host': "erozz911.my.id",
-    'database': "erop3494_prediksi_pengeboran"
+    'host': "siapkantahlebak.my.id",
+    'database': "u567029078_tes"
 }
 
 
