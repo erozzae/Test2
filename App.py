@@ -2,12 +2,20 @@ import streamlit as st
 import mysql.connector
 
 # Mengambil informasi rahasia
+# db_config = {
+#     'user': st.secrets["mysql"]["user"],
+#     'password': st.secrets["mysql"]["password"],
+#     'host': st.secrets["mysql"]["host"],
+#     'database': st.secrets["mysql"]["database"]
+# }
+
 db_config = {
-    'user': st.secrets["mysql"]["user"],
-    'password': st.secrets["mysql"]["password"],
-    'host': st.secrets["mysql"]["host"],
-    'database': st.secrets["mysql"]["database"]
+    'user': "erop3494_tes",
+    'password': "Uzo12345_!",
+    'host': "erozz911.my.id",
+    'database': "erop3494_prediksi_pengeboran"
 }
+
 
 # Membuat koneksi ke database
 def get_connection():
@@ -23,9 +31,15 @@ def query_data(query):
     connection.close()
     return result
 
+
+
 # Streamlit app
 st.title('Data dari MySQL')
 
-query = "SELECT * FROM well_a limit 10"  # Ganti dengan query yang sesuai
-data = query_data(query)
-st.write(data)
+# Membuat input teks
+input = st.text_input('Masukkan Nama Anda')
+
+# Membuat tombol submit
+if st.button('Submit'):
+    data = query_data(input)
+    st.write(data)
